@@ -6,10 +6,9 @@
     "start": "ng serve",
     "build": "ng build",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d home ",
+    "deploy": "gh-pages -d dist",
     "lint": "ng lint",
-    "e2e": "ng e2e",
-    "test": "jest --watchAll --verbose --coverage --runInBand"
+    "e2e": "ng e2e"
   },
   "private": true,
   "dependencies": {
@@ -54,14 +53,10 @@
   "description": "This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.0.",
   "main": "karma.conf.js",
   "repository": {
-    "type": "git",
-    "url": "git+https://github.com/anwaribrahim3/Ang_Mat_Learn.git"
+    "type": "git"
   },
   "keywords": [],
   "author": "",
-  "homepage": "https://anwaribrahim3.github.io/Ang_Mat_Learn",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/anwaribrahim3/Ang_Mat_Learn/issues"
-  }
+  "homepage": "https://anwaribrahim3.github.io/Angular_Materials",
+  "license": "ISC"
 }
