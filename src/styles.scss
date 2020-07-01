@@ -1,0 +1,48 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+.mat-grid-tile .mat-figure {
+   flex-direction: column;
+  justify-content: flex-start !important;
+  align-items: flex-start !important;
+ 
+ 
+}
+
+.mat-radio-button.mat-accent .mat-radio-ripple .mat-ripple-element {
+  opacity: 0 !important;
+  /*click effect color change*/
+  background-color: #33929e !important;
+ 
+}
+
+.mat-radio-button.mat-accent .mat-radio-inner-circle {
+  background-color: #33929e !important;
+ 
+  /*inner circle color change*/
+}
+
+.mat-radio-button.mat-accent.mat-radio-checked .mat-radio-outer-circle {
+  border-color: #33929e !important;
+  
+  /*outer ring color change*/
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+
+
+.table{
+    table {
+      width: 100%;
+    }
+}
+
+   .uploader-status ::ng-deep .mat-progress-spinner circle,
+   .mat-spinner circle {
+     stroke: #000000;
+   }

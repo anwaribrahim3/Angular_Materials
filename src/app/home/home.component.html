@@ -1,0 +1,304 @@
+<mat-drawer-container class="example-container" autosize>
+  <mat-drawer #drawer class="example-sidenav" mode="side" opened>
+    <mat-toolbar>AMD</mat-toolbar>
+  <mat-list>
+  <a href="localhost:4200">
+    <div class="list" (click)="showdashboard()">
+      <div>
+        <mat-list-item >
+          <mat-icon>dashboard</mat-icon>
+     </mat-list-item>
+     </div>
+     <div class="text"> dashboard </div>
+     </div>
+     </a>
+      <mat-divider></mat-divider>
+    <a href="localhost:4200">
+      <div class="list" (click)="showprofile()">
+      <div>
+        <mat-list-item >
+          <mat-icon>person</mat-icon>
+        </mat-list-item>
+      </div>
+     
+      <div class="text"> Profile </div>
+    </div>
+    </a>
+    <mat-divider></mat-divider>
+
+    <a href="localhost:4200">
+    <div class="list" (click)="showtable()">
+      <div>
+        <mat-list-item >
+          <mat-icon>table_view</mat-icon>
+        </mat-list-item>
+      </div>
+    
+      <div class="text"> Table </div>
+    </div>
+    </a>
+      <mat-divider></mat-divider>
+    <div class="list1" (click)="openBottomSheet()">
+      <div>
+        <mat-list-item>
+         Action
+        </mat-list-item>
+      </div>
+    </div>
+  
+  </mat-list>
+  </mat-drawer>
+
+  <div class="example-sidenav-content">
+  <!--  <button type="button" mat-button (click)="drawer.toggle()">
+    <mat-icon>keyboard_arrow_right</mat-icon>
+     
+    </button>-->
+
+  <mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <span></span>
+      <span class="example-spacer"></span>
+      <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+        <mat-icon>search</mat-icon>
+      
+      </button>
+        <button mat-icon-button class="example-icon"  aria-label="Example icon-button with menu icon" (click)="shownotifications()">
+         <mat-icon matBadge="5" >notifications</mat-icon>
+      
+        </button>
+       
+          <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+            <mat-icon>menu</mat-icon>
+          </button>
+    </mat-toolbar-row>
+  
+     <div class="notification" *ngIf="hide">
+       <p class="para">You have a Email</p>
+        <p class="para">You have a meeting</p>
+        <p class="para">You have a missed call</p>
+        <p class="para">You have a message</p>
+        <p class="para">You have a notification</p>
+     </div>
+  </mat-toolbar>
+
+<div class="container">
+  <div class="dashboard" *ngIf="dashboard">
+  <mat-grid-list cols="3" rowHeight="320" [gutterSize]="'15px'">
+    <mat-grid-tile>
+   <mat-toolbar>Site Visitors</mat-toolbar>
+ <!--<div id="chartContainer" style="height: 370px; width: 100%; margin-left:auto;margin-right:auto;"></div>
+   <div class="chart-wrapper">
+     <canvas baseChart [data]="doughnutChartData" [labels]="doughnutChartLabels" [colors]="pieColor
+    [chartType]=" doughnutChartType">
+     </canvas>
+   </div>-->
+      </mat-grid-tile>
+   
+    <mat-grid-tile><mat-toolbar>Warnings</mat-toolbar></mat-grid-tile>
+    <mat-grid-tile><mat-toolbar>Memory load</mat-toolbar></mat-grid-tile>
+      <mat-grid-tile>
+
+        <div class="section">
+      <mat-toolbar>Server Control Panel</mat-toolbar>
+
+<div class="para4" *ngIf="loading">
+  <div class="line1 line2"></div>
+</div>
+      
+     <mat-radio-group aria-label="Select an option">
+        <mat-radio-button value="1">Option 1</mat-radio-button><br>
+        <mat-radio-button value="2">Option 2</mat-radio-button>
+      </mat-radio-group>
+        
+      </div>
+      <div class="button">
+      <button mat-raised-button color="warn" (click)="openDialog()">Reload Server</button>
+      </div>
+      
+      </mat-grid-tile>
+        <mat-grid-tile><mat-toolbar>Usage Stats</mat-toolbar></mat-grid-tile>
+          <mat-grid-tile>
+            <div class="headicon">
+              <div class="head">
+                <mat-toolbar>Autocomplete Input</mat-toolbar>
+              </div>
+              <div class="icon">
+                <mat-icon (click)="showradiobutton()">more_vert</mat-icon>
+              </div>
+            </div>
+ <mat-radio-group aria-label="Select an option" *ngIf="showradio">
+   <mat-radio-button value="1">Option 1</mat-radio-button><br>
+   <mat-radio-button value="2">Option 2</mat-radio-button>
+ </mat-radio-group>
+
+<div class="autocomplete">
+<form>
+  <mat-form-field class="example-full-width">
+    <input type="text" matInput [matAutocomplete]="auto" [formControl]="myControl" [(ngModel)]="selected"/>
+<mat-autocomplete #auto="matAutocomplete" >
+  <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+    {{option}}
+    
+  </mat-option>
+</mat-autocomplete>
+<br>
+
+  </mat-form-field>
+</form>
+         <p>You selected :<b> {{selected}}</b></p>
+         </div>
+          </mat-grid-tile>
+  </mat-grid-list>
+
+ <!--<mat-grid-list cols="2" rowHeight="320" [gutterSize]="'15px'" class="grid2">
+    <mat-grid-tile><mat-toolbar>Performance</mat-toolbar></mat-grid-tile>
+    <mat-grid-tile><mat-toolbar>TODO List</mat-toolbar></mat-grid-tile>
+   
+  </mat-grid-list>-->
+
+
+   </div>
+
+
+<div class="profile" *ngIf="profile">
+ 
+  <mat-toolbar>
+ <form class="example-form">
+   <mat-form-field class="example-full-width">
+     <mat-label>User name</mat-label>
+     <input matInput value="Admin">
+   </mat-form-field>
+&nbsp;
+  <mat-form-field class="example-full-width">
+    <mat-label>Email</mat-label>
+    <input matInput [formControl]="emailFormControl" [errorStateMatcher]="matcher" value="contact@flatlogic.com">
+    <mat-hint>Errors appear instantly!</mat-hint>
+    <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+      Please enter a valid email address
+    </mat-error>
+    <mat-error *ngIf="emailFormControl.hasError('required')">
+      Email is <strong>required</strong>
+    </mat-error>
+  </mat-form-field>
+ </form>
+  </mat-toolbar>
+<br>
+   <mat-form-field class="example-full-width">
+     <mat-label>Company (disabled)</mat-label>
+     <input matInput disabled value="Google">
+   </mat-form-field>
+
+   <mat-form-field >
+     <mat-label>Choose a date</mat-label>
+     <input matInput [matDatepicker]="picker" placeholder="mm/dd/yy">
+     <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+     <mat-datepicker #picker></mat-datepicker>
+   </mat-form-field>
+
+
+    <table class="example-full-width" cellspacing="0">
+      <tr>
+        <td>
+          <mat-form-field class="example-full-width">
+            <mat-label>First name</mat-label>
+            <input matInput>
+          </mat-form-field>
+        </td>
+        <td>
+          <mat-form-field class="example-full-width">
+            <mat-label>Long Last Name That Will Be Truncated</mat-label>
+            <input matInput>
+          </mat-form-field>
+        </td>
+      </tr>
+    </table>
+
+    <p>
+      <mat-form-field class="example-full-width">
+        <mat-label>Address</mat-label>
+        <textarea matInput placeholder="Ex. 100 Main St">1600 Amphitheatre Pkwy</textarea>
+      </mat-form-field>
+     
+    </p>
+
+    <table class="example-full-width" cellspacing="0">
+      <tr>
+        <td>
+          <mat-form-field class="example-full-width">
+            <mat-label>City</mat-label>
+            <input matInput placeholder="Ex. San Francisco">
+          </mat-form-field>
+        </td>
+        <td>
+          <mat-form-field class="example-full-width">
+            <mat-label>State</mat-label>
+            <input matInput placeholder="Ex. California">
+          </mat-form-field>
+        </td>
+        <td>
+          <mat-form-field class="example-full-width">
+            <mat-label>Postal Code</mat-label>
+            <input matInput #postalCode maxlength="6" placeholder="Ex. 941054" value="940435">
+            <mat-hint align="end">{{postalCode.value.length}} / 6</mat-hint>
+          </mat-form-field>
+        </td>
+      </tr>
+    </table>
+
+     <p>
+       <mat-form-field>
+         <mat-label>About Us</mat-label>
+         <textarea matInput placeholder="Ex. 100 Main St" class="area">We are young and ambitious full service design and technology company. Our focus is JavaScript development and User Interface design.
+</textarea>
+       </mat-form-field>
+
+     </p>
+</div>
+
+
+</div>
+
+<div class="table" *ngIf="table">
+
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+    <!--- Note that these columns can be defined in any order.
+        The actual rendered columns are set as a property on the row definition" -->
+
+    <!-- Position Column -->
+    <ng-container matColumnDef="position">
+      <th mat-header-cell *matHeaderCellDef> No. </th>
+      <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef> Issue </th>
+      <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+    </ng-container>
+
+    <!-- Weight Column -->
+    
+
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="symbol">
+      <th mat-header-cell *matHeaderCellDef> Status </th>
+      <td mat-cell *matCellDef="let element"> {{element.symbol}} </td>
+    </ng-container>
+
+     <ng-container matColumnDef="percentage">
+       <th mat-header-cell *matHeaderCellDef> percentage </th>
+       <td mat-cell *matCellDef="let element"> {{element.percentage}}% </td>
+     </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns" class="tabhead"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+
+
+</div>
+
+
+</div>
+</mat-drawer-container>

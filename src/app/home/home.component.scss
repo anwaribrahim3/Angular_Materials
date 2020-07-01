@@ -1,0 +1,330 @@
+.example-container {
+  width: 100%;
+  height: 100vh;
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+
+.example-sidenav-content {
+  display: flex;
+  height: 100%;
+  align-items: left;
+  justify-content: left ;
+}
+
+.example-sidenav {
+
+  width: 150px;
+  
+
+  mat-toolbar{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+     box-shadow: 0 2px 4px -1px rgba(0, 0, 0, .2),
+     0 4px 5px 0 rgba(0, 0, 0, .14),
+     0 1px 10px 0 rgba(0, 0, 0, .12);
+  
+  }
+}
+
+.list{
+  margin: 10px;
+   padding: 60px 0px;
+   align-items: center;
+   justify-content: center;
+   text-align: center;
+   overflow: hidden;
+   border-radius: 5px;
+}
+
+.list:hover{
+background-color: rgba(158, 158, 158, 0.2);
+
+}
+.mat-pseudo-checkbox-checked {
+  background-color: #00f;
+}
+mat-list{
+  
+  mat-icon{
+   font-size: 300%;
+  display: flex;
+  align-items: center;
+  justify-content:center ;
+  color: rgb(63, 61, 61);
+ 
+  }
+mat-list-item{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+ text-align: center;
+ cursor: pointer;
+}
+
+.text{
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+
+}
+
+a:focus {
+  color: red;
+  mat-list{
+    mat-icon{
+      color: red;
+    }
+  }
+
+}
+
+.example-sidenav-content {
+  display: block;
+mat-toolbar{
+  height: 64px;
+  width: 100%;
+  background-color: rgb(117, 117, 117);
+  color: rgba(255, 255, 255, 0.87);
+  position: relative;
+  .notification{
+    position: absolute;
+    color: black;
+    top: 100%;
+    right: 10px;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 10px 00px;
+    font-size: 16px;
+    width: 220px;
+    text-align: left;
+    font-weight: normal;
+   z-index: 2;
+    .para{
+        padding: 0px 10px;
+       padding-left: 15%;
+       cursor: pointer;
+    }
+    .para:hover{
+     background-color: rgb(117, 117, 117);
+     color: #fff;
+    }
+    p{
+      margin-block-start: 0em;
+      margin-block-end: 0em;
+    }
+  }
+}
+.example-spacer {
+  flex: 1 1 auto;
+}
+.mat-icon-button{
+  width: 60px;
+}
+.container{
+  padding: 15px;
+  background-color: #ECECEC;
+}
+mat-grid-list{
+  max-width: 100%;
+  
+ 
+
+mat-grid-tile {
+  background: #fff;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .2),
+  0 1px 1px 0 rgba(0, 0, 0, .14),
+  0 2px 1px -1px rgba(0, 0, 0, .12);
+
+  mat-toolbar{
+background-color: #fff;
+color: rgb(117, 117, 117);
+font-weight: normal;
+  }
+  mat-radio-group{
+    mat-radio-button{
+      padding: 10px 20px;
+    }
+  }
+
+ input[type="radio"]:checked + #favour {
+    color: #0B4DB7;
+  
+ }
+
+.button{
+  padding:15px 20px;
+  animation-delay: 4s;
+}
+
+}
+}
+.grid2{
+  margin-top: 15px;
+}
+
+
+}
+
+
+ .para4 {
+  
+  padding: 10px 20px;
+
+   .line1::before {
+     content: '';
+     height: 5px;
+     position: absolute;
+     width: 350px;
+     background-color: rgb(197, 192, 192);
+     z-index: 1;
+   }
+
+   .line1::after {
+     content: '';
+     background-color: #33929e;
+     width: 350px;
+     transition: 3s ease-in-out;
+     display: block;
+     height: 5px;
+     animation: animative 4s ;
+      animation-iteration-count: 1;
+     position: absolute;
+     z-index: 2;
+     
+   }
+
+   @keyframes animative {
+     0% {
+       width:0;
+     }
+     100% {
+       width:350px;
+    
+     }
+    }
+  }
+.headicon{
+  display: flex;
+  align-items: center;
+  
+  width: 100%;
+  .head{
+  width: 90%;
+  text-align: left;
+  }
+  .icon{
+    width: 10%;
+    margin-top: 10px;
+    mat-icon{
+    font-size: 200%;
+    cursor: pointer;
+  }
+  }
+}
+  .autocomplete{
+    padding: 10px 20px;
+    .example-full-width{
+      width: 120%;
+    }
+    
+  }
+    .uploader-status ::ng-deep .mat-progress-spinner circle,
+    .mat-spinner circle {
+      stroke: #000000;
+    }
+  ::ng-deep .mat-focused .mat-form-field-label {
+    /*change color of label*/
+    color: #5438ce !important;
+  }
+
+  ::ng-deep.mat-form-field-underline {
+    /*change color of underline*/
+  }
+
+  ::ng-deep.mat-form-field-ripple {
+    /*change color of underline when focused*/
+    background-color: #5438ce !important;
+
+  }
+.example-sidenav-content{
+  .profile{
+  
+    background-color: #fff;
+    padding: 0px 10px;
+      padding-top: 20px;
+    mat-toolbar{
+      background-color: rgb(51, 50, 50);
+      height: 100px;
+      color: #fff;
+      font-size: inherit;
+    }
+
+ 
+mat-hint{
+  color: #f44336;
+}
+.example-full-width {
+  width: 80%;
+  margin-right: 20px;
+}
+td {
+  padding-right: 8px;
+}
+.area{
+  height: 145px;
+  width: 140%;
+  overflow-x: hidden;
+  word-spacing: 4px;
+}
+  }
+  }
+
+  .table{
+    padding: 15px 20px;
+  th.mat-header-cell,
+  td.mat-cell,
+  td.mat-footer-cell{
+    font-size: 20px;
+  }
+
+   tr:hover{
+     background-color: rgb(197, 192, 192); 
+   }
+.tabhead:hover {
+  background-color: #fff;
+}
+   table {
+     width: 100%;
+     table-layout: fixed;
+   }
+
+   th
+   {
+     overflow: hidden;
+     width: 200px;
+     text-overflow: ellipsis;
+     white-space: nowrap;
+   }
+
+    th:nth-child(1){
+      width: 100px;
+    }
+  }
+
+.bottomsheet{
+  width: 1100px;
+  overflow-x: hidden;
+p{
+  display: flex;
+ font-size: 20px;
+ cursor: pointer;
+
+  mat-icon{
+    font-size: 90%;
+  }
+}
+}
